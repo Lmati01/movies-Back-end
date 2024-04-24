@@ -1,4 +1,7 @@
 package my.zone.movies;
 
-public interface ReviewRepository {
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface ReviewRepository extends MongoRepository<Review, ObjectId> {
 }

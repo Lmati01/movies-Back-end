@@ -11,9 +11,11 @@ public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
 
-    public static List<Movie> allMovies(){  return movieRepository.findAll();  }
-}
+    public List<Movie> allMovies(){
+        return movieRepository.findAll();
+    }
 
-public Optional<Movie> singleMovie(String imdbId) {
-    return movieRepository.findAll(imdbId);
+    public Optional<Movie> singleMovie(String imdbId) {
+        return movieRepository.findMovieByImdbId(imdbId);
+    }
 }

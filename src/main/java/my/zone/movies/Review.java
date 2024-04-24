@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.*;
 
-@Document(collection="movies")
+@Document(collection="reviews")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,4 +18,7 @@ public class Review {
     private ObjectId id;
     private String body;
 
+    public Review(String body) {
+        this.body = body;
+    }
 }
